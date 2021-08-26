@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: GAMA
 title:  "GAMA COMOKIT UnB"
 date:   2021-08-26 10:15:44 -0300
 categories: jekyll update
