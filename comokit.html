@@ -317,6 +317,70 @@
                 </div>
             </div>
         </article>
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h3>Aplicando COMOKIT</h3>
+                        <p>Para usar o COMOKIT o software GAMA deve estar instalado. Após isso, é possível aplicar o COMOKIT para explorar o impacto das políticas de controle em um determinado estudo de caso (um estudo de caso definido por sua localização geográfica e limites, possivelmente dados GIS sobre o ambiente construído e possivelmente dados populacionais).</p>
+                        <h5 class="mt-4">Duplique o COMOKIT Template Projectem seu espaço de trabalho</h5>
+                        <p>Ao definir um novo estudo de caso, a maneira mais fácil de proceder é criar um novo projeto, que contém os arquivos de modelo específicos (extensões do modelo base, novos experimentos, etc.), os conjuntos de dados contendo os diferentes dados de entrada do estudo de caso e outros ativos relacionados ao estudo de caso.</p>
+                        <p>O COMOKIT fornece um projeto de modelo padrão (ou seja, não funcional per se ) que define o layout básico de um projeto COMOKIT e fornece modelos para construir novos experimentos.</p>
+                        <p>A primeira etapa é duplicar (e renomear) esse projeto-modelo para que ele se torne um novo projeto na User modelsseção da área de trabalho.</p>
+                        <p>Localize-o primeiro (no Library modelsou no User modelsdependendo da instalação do COMOKIT):</p>
+                        <img src="assets/img/comokit/apply_comokit_1.png" class="img-fluid" alt="">
+                        <p>Copie todo o projeto:</p>
+                        <img src="assets/img/comokit/apply_comokit_2.png" class="img-fluid" alt="">
+                        <p>Cole-o em User models:</p>
+                        <img src="assets/img/comokit/apply_comokit_3.png" class="img-fluid" alt="">
+                        <p>Verifique se está colocado corretamente:</p>
+                        <img src="assets/img/comokit/apply_comokit_4.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h3>Crie um novo estudo de caso</h3>
+                        <p>Para declarar ou aplicar um experimento a um novo estudo de caso, o COMOKIT requer um conjunto de dados mínimo que deve ser, pelo menos, composto de:</p>
+                        <p><strong>Dados espaciais:</strong></p>
+                        <ul>
+                            <li><strong>boundary.shp</strong> [Obrigatório]: este arquivo deve conter o limite do estudo de caso. É o único arquivo absolutamente necessário para definir um novo estudo de caso. Mais informações sobre shapefiles e repositórios estão disponíveis aqui ou usando o repositório DIVA . Vídeos mostrando como baixar Shapefiles para uma área específica também estão disponíveis aqui e aqui .</li>
+                            <li><strong>buildings.shp</strong> [Opcional]: este arquivo deve conter os edifícios do estudo de caso. Os edifícios são no COMOKIT os locais onde são realizadas as atividades individuais. A tabela de atributos do arquivo de forma deve conter uma coluna nomeada typecontendo o tipo de edifício de acordo com as especificações OSM . Se as construções não estiverem disponíveis para o estudo de caso, o COMOKIT propõe um modelo (in COMOKIT/Utilities/Generate GIS Data.gaml) que solicita servidores OSM com relação à área definida em boundary.shpe tenta construir o buildings.shparquivo automaticamente. Este breve vídeo irá guiá-lo através deste processo:</li>
+                        </ul>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sQI63mgtYi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p>Você pode encontrar exemplos de conjuntos de dados completos na pasta de conjuntos de dados padrão incluída no COMOKIT (pasta COMOKIT/Datasetsem seu espaço de trabalho) ou no repositório de conjuntos de dados adicionais .</p>
+                        <p><strong>Dados demográficos:</strong></p>
+                        <ul>
+                            <li><strong>population.csv</strong> [Opcional]: um arquivo que contém indivíduos com alguns atributos básicos, ou seja, idade, sexo, situação profissional e identificador domiciliar. Se este arquivo não estiver presente , a população será gerada com base nas edificações disponíveis.</li>
+                            <li><strong>satellite.png e satellite.pgw</strong> [Opcional]: se os modeladores desejam adicionar uma imagem de fundo georreferenciada (por exemplo, do GoogleMap).</li>
+                        </ul>
+                        <p><strong>Parâmetros:</strong></p>
+                        <p>Os parâmetros dos diferentes submodelos podem ser especificados, seja no código GAML do novo experimento ou em seus próprios arquivos de configuração. Veja como fazer isso nesta página .</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h3>Crie uma nova experiência</h3>
+                        <p>No novo projeto criado após o modelo, escolha criar um novo arquivo de modelo. O GAMA detectará os templates presentes em seu projeto e se proporá a utilizar um deles como base para o novo experimento.</p>
+                        <p>Crie um novo arquivo de modelo (ainda não é um novo arquivo de experimento: os arquivos de modelo são mais flexíveis):</p>
+                        <img src="assets/img/comokit/new_experience.png" class="img-fluid" alt="">
+                        <p>Vários modelos (correspondentes aos presentes em ( Your Project/templates) são propostos além dos básicos:</p>
+                        <img src="assets/img/comokit/new_experience2.png" class="img-fluid" alt="">
+                        <p>O novo modelo é colocado automaticamente na modelssubpasta. Se o conjunto de dados for criado e localizado corretamente, o experimento que ele define pode ser executado imediatamente.</p>
+                        <img src="assets/img/comokit/new_experience3.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </article>
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
