@@ -1,0 +1,132 @@
+---
+layout: post
+title:  "Software GAMA"
+date:   2021-09-13 20:46:55 -0300
+categories: gama platform
+---
+    Gama COMOKIT         
+
+[GAMA COMOKIT](index.html) Menu
+
+*   [Início](index.html)
+*   [Sobre o projeto](about.html)
+*   [Documentação](document.html)
+*   [Contato](contact.html)
+
+Software GAMA
+=============
+
+GAMA é um ambiente de desenvolvimento de modelagem e simulação para a construção de simulações baseadas em agentes espacialmente explícitas
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+**GAMA** é uma plataforma de simulação que visa fornecer a especialistas de campo, modeladores e cientistas da computação um ambiente completo de modelagem e desenvolvimento de simulação para a construção de simulações multiagentes espacialmente explícitas. Ele foi desenvolvido pela equipe de pesquisa vietnamita-francesa MSI (localizada em IFI, Hanoi, e parte da IRD / SU International Research Unit UMMISCO) de 2007 a 2010, e agora é desenvolvido por um consórcio de parceiros acadêmicos e industriais liderados pela UMMISCO, entre as quais a Universidade de Rouen, França, a Universidade de Toulouse 1, França, a Universidade de Orsay, França, a Universidade de Can Tho, Vietnã, a Universidade Nacional de Hanoi, EDF R&D, França e CEA LISC, França.
+
+### Instalação
+
+A versão 1.8.1 possui uma versão JAVA JDK embutido. A instalação é realizada em três etapas: download, extração dos arquivos e execução do executável.
+
+GAMA 1.8.1 (a última versão) vem em 6 versões diferentes:
+
+*   2 versões para cada um dos 3 ambientes (por padrão em 64 bits) Windows, MacOS X e Linux (testado principalmente no Ubuntu);
+*   Para cada sistema operacional, uma versão inclui o Java JDK (1.8.0\_161 em 64 bits) e outra não.
+
+Para fazer o download, visite a [página de download oficial do Gama](https://gama-platform.github.io/download), você só precisa extrair o arquivo zip onde quiser em sua máquina e iniciar o GAMA
+
+### Requisitos
+
+O GAMA 1.8.1 requer aproximadamente 540 MB de espaço em disco (resp. 120 MB em sua versão sem Java JDK) e um mínimo de 4 GB de RAM. É possível aumentar as instruções, consulte a página oficial do GAMA para mais informações.
+
+A versão com JDK não requer a instalação de nenhum outro software e em particular do Java JDK.
+
+A versão sem JDK requer que o **Java 1.8 Oracle JDK** esteja instalado em sua máquina.
+
+**Observe que GAMA não é considerado compatível com Java 1.9 e Java 1.10** , pois não foi testado nesses ambientes.
+
+### Iniciando o GAMA
+
+Para iniciar o GAMA pela primeira, basta executar o aplicativo "Gama.exe" no Windows, "Gama.app" no MacOSX e "Gama" no Linux. O aplicativo está localizado na pasta chamada "GAMA\_1.8" após descompactar os arquivos baixados.
+
+Caso ocorra erros, consulte as instruções de instalação ou [solução de problemas no site oficial do Gama.](https://gama-platform.github.io/wiki/Troubleshooting)
+
+### Iniciar o aplicativo a partir da linha de comando
+
+Observe que o GAMA também pode ser iniciado de duas outras maneiras diferentes:
+
+Para execução no modo Headless, consulte [a página do Gama](https://gama-platform.github.io/wiki/Headless).
+
+Pelo terminal, usando um caminho para um arquivo de modelo e o nome ou número de um experimento, a fim de permitir a execução deste experimento diretamente (observe que os dois argumentos são opcionais: se o segundo for omitido, o arquivo é importado para a área de trabalho se ainda não estiver presente e aberto em um editor; se ambos forem omitidos, GAMA é iniciado como de costume):
+
+Gama.app/Contents/MacOS/Gama path\_to\_a\_model\_file#experiment\_name\_or\_number no Mac OS X
+
+Gama path\_to\_a\_model\_file#experiment\_name\_or\_number no Linux
+
+Gama.exe path\_to\_a\_model\_file#experiment\_name\_or\_number no Windows
+
+### Escolhendo um Espaço de Trabalho
+
+Depois da tela inicial, o GAMA solicitará que você escolha um espaço de trabalho no qual armazenar seus modelos e seus dados e configurações associados. A área de trabalho pode ser qualquer pasta em seu sistema de arquivos na qual você tenha privilégios de leitura / gravação. Se você deseja que o GAMA lembre-se de sua escolha na próxima vez que executá-lo (pode ser útil se você executar o Gama na linha de comando), simplesmente marque a opção correspondente. Se esta caixa de diálogo não aparecer ao iniciar o GAMA, provavelmente significa que você herdou de um espaço de trabalho mais antigo usado com uma versão anterior do GAMA (e ainda "lembrado"). Nesse caso, será emitido um aviso para indicar que a biblioteca de modelos está desatualizada, oferecendo-lhe a possibilidade de criar um novo espaço de trabalho.
+
+![](assets/img/install/install1.png)
+
+Você pode inserir seu endereço ou navegar em seu sistema de arquivos usando o botão apropriado. Se a pasta já existe, ela será reutilizada (após um aviso se ainda não for um espaço de trabalho). Caso contrário, ele será criado. É sempre uma boa ideia, ao iniciar uma nova versão do GAMA pela primeira vez, criar um novo espaço de trabalho. Posteriormente, você poderá importar seus modelos existentes para ele. Não fazer isso pode levar a erros estranhos nos vários processos de validação.
+
+![](assets/img/install/install2.png)
+
+Quando você tenta escolher um espaço de trabalho usado com um anterior do GAMA, o seguinte pop-up aparecerá.
+
+![](assets/img/install/install3.png)
+
+### Página de boas-vindas
+
+Assim que o espaço de trabalho for criado, o GAMA será aberto e você verá sua primeira janela . GAMA é baseado no Eclipse e reutiliza a maioria de suas metáforas visuais para organizar o trabalho do modelador. A janela principal é então composta por várias partes , que podem ser visualizações ou editores , e são organizadas em uma perspectiva . GAMA propõe 2 perspectivas principais: Modelagem , dedicada à criação de modelos, e Simulação , dedicada à sua execução e exploração. Outras perspectivas estão disponíveis se você usar modelos compartilhados.
+
+A perspectiva padrão na qual o GAMA é aberto é Modelagem . É composto por uma área central onde os editores GAML são exibidos, que é circundada por uma visualização do Navigator no lado esquerdo da janela, uma visualização Outline (vinculada ao editor aberto), a visualização Problems, que indica erros e avisos presente nos modelos armazenados na área de trabalho e em um console interativo, que permite ao modelador experimentar algumas expressões e obter um resultado imediato.
+
+![](assets/img/boas_vindas.png)
+
+Na ausência de modelos abertos anteriormente, GAMA exibirá uma página de boas - vindas (na verdade, uma página da web), a partir da qual você pode encontrar links para o site, documentação atual, tutoriais, etc. Esta página pode ser mantida aberta (por exemplo, se você quiser para exibir a documentação ao editar modelos), mas também pode ser fechado com segurança (e reaberto mais tarde no menu "Visualizações").
+
+![](assets/img/boas_vindas2.png)
+
+Veja mais informações sobre a instalação e execução do Gama em: [https://gama-platform.github.io/wiki/InstallationAndLaunching](https://gama-platform.github.io/wiki/InstallationAndLaunching)
+
+### Espaço de trabalho, projetos e modelos
+
+Assim que o espaço de trabalho for criado, o GAMA será aberto e você verá sua primeira janela . GAMA é baseado no Eclipse e reutiliza a maioria de suas metáforas visuais para organizar o trabalho do modelador. A janela principal é então composta por várias partes , que podem ser visualizações ou editores , e são organizadas em uma perspectiva . GAMA propõe 2 perspectivas principais: Modelagem , dedicada à criação de modelos, e Simulação , dedicada à sua execução e exploração. Outras perspectivas estão disponíveis se você usar modelos compartilhados.
+
+Exceto quando executado no modo headless , GAMA não pode funcionar sem um espaço de trabalho válido .
+
+O espaço de trabalho é organizado em 4 categorias , que são organizadas em projetos.
+
+Os projetos presentes no espaço de trabalho podem ser armazenados diretamente nele (como subdiretórios), o que geralmente é o caso quando o usuário cria um novo projeto, ou vinculados a ele (portanto, o espaço de trabalho conterá apenas um link para o diretório de o projeto, supostamente em algum lugar no sistema de arquivos ou na rede). Um mesmo projeto pode ser vinculado a partir de diferentes espaços de trabalho.
+
+Os arquivos de modelos GAMA são armazenados nesses projetos , que podem conter também outros arquivos (chamados de recursos ) necessários para o funcionamento dos modelos . Um projeto pode, é claro, conter vários arquivos de modelo , especialmente se eles estiverem importando uns aos outros, se representarem diferentes visualizações no mesmo tópico ou se compartilharem os mesmos recursos.
+
+Veja mais informações sobre Espaço de trabalho, projetos e modelos em: [https://gama-platform.github.io/wiki/WorkspaceProjectsAndModels](https://gama-platform.github.io/wiki/WorkspaceProjectsAndModels)
+
+### Editando modelos
+
+A edição de modelos no GAMA é muito semelhante à edição de programas em um IDE moderno como o Eclipse . Depois de ter lançado o programa com sucesso , o usuário tem dois conceitos fundamentais à sua disposição: um espaço de trabalho , que contém modelos ou links para modelos organizados como uma hierarquia de arquivos em um sistema de arquivos, e o ambiente de trabalho (também conhecido como a janela principal ), que contém as ferramentas para criar, modificar e experimentar esses modelos.
+
+O entendimento de como navegar no espaço de trabalho é abordado em outra seção e, para o propósito desta seção, precisamos apenas entender que ele está organizado em projetos , os quais contêm modelos e seus dados associados. Os projetos são categorizados posteriormente, no GAMA, em quatro categorias: Biblioteca de modelos , modelos de plug-in , modelos de teste ( modelos integrados enviados com GAMA e vinculados automaticamente a partir do espaço de trabalho) e modelos de usuário .
+
+Veja mais informações sobre edição de modelos em: [https://gama-platform.github.io/wiki/EditingModels](https://gama-platform.github.io/wiki/EditingModels)
+
+### Experimentos em execução
+
+Executar um experimento é a única maneira, no GAMA, de executar simulações em um modelo. Os experimentos podem ser executados de maneiras diferentes.
+
+*   A primeira, e mais comum, consiste em lançar um experimento na perspectiva da Modelagem, utilizando a interface do usuário proposta pela perspectiva da simulação para rodar as simulações.
+*   A segunda forma, detalhada nesta página , permite lançar automaticamente um experimento ao abrir o GAMA, posteriormente utilizando a mesma interface de usuário.
+*   A última forma, conhecida como execução de experimentos sem cabeça , não faz uso da interface do usuário e permite manipular o GAMA inteiramente a partir da linha de comando.
+
+Todas as três maneiras são estritamente equivalentes em termos de cálculos (com exceção da última omitindo todos os cálculos necessários para renderizar simulações em monitores ou na IU). Eles simplesmente diferem pelo uso:
+
+*   O primeiro é muito usado ao projetar modelos ou demonstrar vários modelos.
+*   O segundo destina-se a ser usado ao demonstrar ou experimentar um único modelo.
+*   O último é útil ao executar grandes conjuntos de simulações, especialmente em redes ou grades de computadores.
+
+Veja mais informações sobre Experimentos em execução em: [https://gama-platform.github.io/wiki/RunningExperiments](https://gama-platform.github.io/wiki/RunningExperiments)
+
+*   [](mailto:gamacomokit@gmail.com)
+*   [](https://github.com/gamacomokitunb)
